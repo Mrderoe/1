@@ -34,4 +34,4 @@ def calculate_co2_absorption(treesam, hours, removeco2):
 
 
 
-bot.run('9xZOczQYO7ov1jn9qjO0tMSvVRm6JwvL')
+bot.run('')
