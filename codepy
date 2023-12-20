@@ -25,10 +25,10 @@ async def burning(ctx, O2: int, C: int):
 @bot.command(name='поглотить_CO2')
 async def absorb_co2(ctx, treesam: int, hours: int):
     removeco2 = 10 
-    removedatall = calculate_co2_absorption(treesam, hours, removeco2)
+    removedatall = calculation(treesam, hours, removeco2)
     await ctx.send(f'{treesam} tree(s) by {hours} hours remove kinda {removedatall} CO2.')
 
-def calculate_co2_absorption(treesam, hours, removeco2):
+def calculation(treesam, hours, removeco2):
     removedatall = treesam * hours * removeco2
     return removedatall
 
