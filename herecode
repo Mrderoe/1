@@ -1,4 +1,3 @@
-import random
 import discord
 from discord.ext import commands
 from librarrry import Дуб, Клён, Берёза, Сосна, Акация, Сиквоя, Ёлка, Пальма, Рябина, treeswtinf
