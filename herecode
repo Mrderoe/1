@@ -1,7 +1,7 @@
 import random
 import discord
 from discord.ext import commands
-
+from librarrry import Дуб, Клён, Берёза, Сосна, Акация, Сиквоя, Ёлка, Пальма, Рябина, treeswtinf
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
@@ -22,16 +22,18 @@ async def burning(ctx, O2: int, C: int):
     CO2 = combin(O2, C)
     await ctx.send(f'after amount of burned things, will be {CO2}')
 
-@bot.command(name='поглотить_CO2')
-async def absorb_co2(ctx, treesam: int, hours: int):
-    removeco2 = 10 
-    removedatall = calculation(treesam, hours, removeco2)
-    await ctx.send(f'{treesam} tree(s) by {hours} hours remove kinda {removedatall} CO2.')
+@bot.command()
+async def absorb_co2(ctx, treesam: int, hours: int, typet):
 
-def calculation(treesam, hours, removeco2):
+    if typet in treeswtinf:
+        removeco2 = treeswtinf[typet] 
+        removedatall = claculatin(treesam, hours, removeco2)
+        await ctx.send(f'{treesam} tree(s) by {hours} hours remove kinda {removedatall} CO2.')
+    else:
+        await ctx.send(f'sorry but no idea about tree - {typet}.')
+
+def claculatin(treesam, hours, removeco2):
     removedatall = treesam * hours * removeco2
     return removedatall
-
-
 
 bot.run('')
