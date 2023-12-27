@@ -22,6 +22,10 @@ async def burning(ctx, O2: int, C: int):
     await ctx.send(f'after amount of burned things, will be {CO2}')
 
 @bot.command()
+async def updates(ctx):
+     await ctx.send(f'they are kinda not soon')
+
+@bot.command()
 async def absorb_co2(ctx, treesam: int, hours: int, typet):
 
     if typet in treeswtinf:
